@@ -1,4 +1,4 @@
-/*class thow{
+class thow{
     void devide()
     {
        try
@@ -21,4 +21,3 @@
     }
 
 }
-*/
