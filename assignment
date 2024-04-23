@@ -1,1 +1,14 @@
+<%@page import= "java.sql.*" %>
+
+<%
+Class.forName("com.mysql.jdbc.Driver");
+String url="jdbc:mysql://localhost:3306/sudhananda";
+Connection con=DriverManager.getConnection(url,"root","");
+String sql="select * from employee";
+Statement stmt=con.createStatement();
+ResultSet rs =stmt.executeQuery(sql);
+rs.next();
+out.print(rs.getString(3));
+
+%>
 
