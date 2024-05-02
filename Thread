@@ -1,0 +1,71 @@
+ class testt1 extends Thread{
+    public void run()
+    {
+        for(int i=1;i<=5;i++)
+        {
+          System.out.println("task1........"+i);  
+        }
+    }
+   }
+   class ajit extends Thread{
+    public void run()
+    {
+        for(int i=0;i<5;i++)
+        {
+        System.out.println("This is the ajit class....."+i);
+        try{
+            this.sleep(1000);
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+        }
+    }
+   }
+
+
+class testt extends Thread
+{
+    /*
+   public void run()
+   {
+    System.out.println("Run the thread");
+   }
+    public static void main (String []args)
+    {
+        testt t1 = new testt();
+        t1.start(); 
+    }
+    */
+   public void run()
+   {
+    for (int i=0;i<5;i++)
+    {
+        System.out.println("Run the thread method.... with delay");
+        // System.out.println("task1........"+i);
+        try{
+        this.sleep(1000);
+        }
+        catch(Exception e)
+        {
+
+        }
+    }
+   }
+  
+   public static void main (String[]args)
+   {
+    testt t1= new testt();
+    t1.start();
+
+
+    testt1 t2 = new testt1();
+    t2.start();
+
+
+
+    ajit t3 = new ajit();
+    t3.start();
+   }
+}
