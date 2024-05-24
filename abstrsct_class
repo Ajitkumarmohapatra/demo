@@ -1,0 +1,45 @@
+/*
+abstract class Agenda1
+{
+    abstract void task1();
+    void task2()
+    {
+        System.out.println("we are inside task 2 of abstract class");
+    }
+    }
+    class abstr extends Agenda1{
+        void task1()
+        {
+            System.out.println("we are inside the task 1 of subclass ");
+        }
+        public static void main (String[]args)
+        {
+            abstr obj = new abstr();
+            obj.task1();
+            obj.task2();
+        }
+    }
+    */
+        // It's a error program
+    abstract class agenda1{
+        public abstract void task1();
+    }
+     abstract class agenda2{
+        public abstract void task1();
+    }
+     class abstr extends agenda1,agenda2{ // java does not support multiple inheritance
+        public void task1()
+        {
+            System.out.println("task1 done..");
+        }
+        public void task2()
+        {
+            System.out.println("task 2 done..");
+        }
+        public static void main (String[]args)
+        {
+            abstr obj = new abstr();
+            obj.task1();
+        }
+    }
+    
